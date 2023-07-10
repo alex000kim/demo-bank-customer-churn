@@ -1,7 +1,7 @@
-dvc[s3]
+dvc[s3]==3.5.0
 dvclive
 pandas
-scikit-learn
+scikit-learn==1.2.2
 eli5
 lightgbm
 xgboost

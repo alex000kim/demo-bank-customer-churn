@@ -33,26 +33,32 @@ stages:
           test_size: 0.25
     outs:
     - path: data/X_test.pkl
-      md5: fcd1b7e28f320159a0eed658ee56ba97
-      size: 186030
+      hash: md5
+      md5: cdcfdded7b0aba25b54243bdc9daf92f
+      size: 185987
     - path: data/X_train.pkl
-      md5: 7caa1ff6b9fd082639f697e702dacb15
-      size: 556049
+      hash: md5
+      md5: 84991cc650d4f320bad44f1242ee6373
+      size: 556006
     - path: data/y_test.pkl
-      md5: 7743d704b8b97cc303ceef12b9be6832
-      size: 60613
+      hash: md5
+      md5: f796d454e4f5898047377aa10f6a8494
+      size: 60580
     - path: data/y_train.pkl
-      md5: c5e58ac55c3f8077ffac66b0e9b3536a
-      size: 180622
+      hash: md5
+      md5: e990ec95986f93bd17f451493cfcbfb7
+      size: 180589
   train:
     cmd: python stages/train.py --config=params.yaml
     deps:
     - path: data/X_train.pkl
-      md5: 7caa1ff6b9fd082639f697e702dacb15
-      size: 556049
+      hash: md5
+      md5: 84991cc650d4f320bad44f1242ee6373
+      size: 556006
     - path: data/y_train.pkl
-      md5: c5e58ac55c3f8077ffac66b0e9b3536a
-      size: 180622
+      hash: md5
+      md5: e990ec95986f93bd17f451493cfcbfb7
+      size: 180589
     - path: stages/train.py
       md5: d54e4eaf7ad9f7c5bb9a740d48a2f9d2
       size: 2536
@@ -83,26 +89,32 @@ stages:
             max_depth: 20
     outs:
     - path: model//clf-model
-      md5: c8a06d11eee4053037d215f4fe6b7ae5
-      size: 20931746
+      hash: md5
+      md5: 471c1b1968accd9de06befa1b86fa5ed
+      size: 20931784
     - path: model//clf-model.mlem
-      md5: c93486baeb8ab115c8116cc733bc5bbe
-      size: 1708
+      hash: md5
+      md5: 98d6f81b2811fc950da9132bb2f94469
+      size: 1995
   eval:
     cmd: python stages/eval.py --config=params.yaml
     deps:
     - path: data/X_test.pkl
-      md5: fcd1b7e28f320159a0eed658ee56ba97
-      size: 186030
+      hash: md5
+      md5: cdcfdded7b0aba25b54243bdc9daf92f
+      size: 185987
     - path: data/y_test.pkl
-      md5: 7743d704b8b97cc303ceef12b9be6832
-      size: 60613
+      hash: md5
+      md5: f796d454e4f5898047377aa10f6a8494
+      size: 60580
     - path: model//clf-model
-      md5: c8a06d11eee4053037d215f4fe6b7ae5
-      size: 20931746
+      hash: md5
+      md5: 471c1b1968accd9de06befa1b86fa5ed
+      size: 20931784
     - path: model//clf-model.mlem
-      md5: c93486baeb8ab115c8116cc733bc5bbe
-      size: 1708
+      hash: md5
+      md5: 98d6f81b2811fc950da9132bb2f94469
+      size: 1995
     - path: stages/eval.py
       md5: 0f8bd41fc66ef9117d6e3451a3ed3631
       size: 2700
@@ -135,11 +147,13 @@ stages:
             max_depth: 20
     outs:
     - path: eval_plots/cm.png
-      md5: e56a750802e2954202029054d2f625bd
+      hash: md5
+      md5: 43ba99a34fb4998de3bf255ba28a0bec
       size: 10413
     - path: eval_plots/plots/sklearn/roc.json
-      md5: f09252db150e39ed71ea13ab914362cf
-      size: 86311
+      hash: md5
+      md5: 87dbc3349d7a2e8d4f8c9bbc4e0e6f1e
+      size: 86312
     - path: feat_imp.csv
       md5: 0877a48b2e2935cb7f596d30137a4e2c
       size: 299
@@ -147,5 +161,6 @@ stages:
       md5: 36658c4136489292fd5e086f04a2f1cb
       size: 67
     - path: models/perm_imp.joblib
-      md5: 64ec49282ee1bea38d577c92914b03be
-      size: 20930427
+      hash: md5
+      md5: 1f39d5ecde0cc22e47b14fb57424fb28
+      size: 20930459
