@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/raw
       hash: md5
-      md5: 226dcfc8e46b9265c0a5dd07d7b9bf2a.dir
-      size: 636966
+      md5: f2da2d61aab2b6979a6d8571c98277d8.dir
+      size: 805409
       nfiles: 3
     - path: src/stages/data_split.py
       md5: 9fbed283d435189303ad63ed525ac366
@@ -37,16 +37,16 @@ stages:
     outs:
     - path: data/processed
       hash: md5
-      md5: bff312f2cabd9080da3884afb243250e.dir
-      size: 964203
+      md5: 8c05c5254f7286c12a6ae4763cd91880.dir
+      size: 1204065
       nfiles: 4
   train:
     cmd: python src/stages/train.py --config=params.yaml
     deps:
     - path: data/processed
       hash: md5
-      md5: bff312f2cabd9080da3884afb243250e.dir
-      size: 964203
+      md5: 8c05c5254f7286c12a6ae4763cd91880.dir
+      size: 1204065
       nfiles: 4
     - path: src/stages/train.py
       md5: 2c9c73e54f3d0f11ad7a855e7089278c
@@ -81,20 +81,20 @@ stages:
     outs:
     - path: models/clf-model.joblib
       hash: md5
-      md5: aeb16af2f6762f747259cecd7db25387
-      size: 24454984
+      md5: 047238f3595c66d187dc348b1645f009
+      size: 28148872
   eval:
     cmd: python src/stages/eval.py --config=params.yaml
     deps:
     - path: data/processed
       hash: md5
-      md5: bff312f2cabd9080da3884afb243250e.dir
-      size: 964203
+      md5: 8c05c5254f7286c12a6ae4763cd91880.dir
+      size: 1204065
       nfiles: 4
     - path: models/clf-model.joblib
       hash: md5
-      md5: aeb16af2f6762f747259cecd7db25387
-      size: 24454984
+      md5: 047238f3595c66d187dc348b1645f009
+      size: 28148872
     - path: src/stages/eval.py
       md5: 5dc0b6e6bdf436234530ccb3657cb12a
       size: 2431
@@ -131,13 +131,13 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: dfeb9b4a935e4eab77030ba9a94168ab
+      md5: d1c45728de496cc9928726e94f7e16ca
       size: 67
     - path: reports/feat_imp.csv
       hash: md5
-      md5: 18be1b32b1842dbcf9e77106c04ee03f
-      size: 187
+      md5: 43e508d13575609c832b183062b13013
+      size: 185
     - path: reports/figures/cm.png
       hash: md5
-      md5: a62a46615d2aeb8536101c31d00253d6
-      size: 10472
+      md5: d92e239cf0e898d72c3886733cb1ec95
+      size: 9833
