@@ -1,12 +1,9 @@
 {
-    "name": "demo-bank-customer-churn ",
-    "build": {
-      "dockerfile": "Dockerfile"
-    },
-    "extensions": [
-		"Iterative.dvc",
-		"mechatroner.rainbow-csv",
-		"ms-python.python"
-	],
-    "postCreateCommand": "pip3 install --user -r requirements.txt; python3 -m dvc pull"
-  }
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "extensions": [
+    "Iterative.dvc",
+    "ms-python.python",
+    "redhat.vscode-yaml"
+  ],
+  "postCreateCommand": "pip install --user -r requirements.txt"
+}
