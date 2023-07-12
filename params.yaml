@@ -17,7 +17,7 @@ base:
   random_state: 42
 
 data_split:
-  test_size: 0.25
+  test_size: 0.2
   processed_data_dir: data/processed
 
 train:
