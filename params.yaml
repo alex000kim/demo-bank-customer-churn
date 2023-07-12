@@ -4,6 +4,7 @@ base:
   countries:
   - France
   - Spain
+  - Germany
   feat_cols:
   - CreditScore
   - Age
@@ -27,3 +28,6 @@ train:
   params:
     n_estimators: 150
     max_depth: 20
+
+drift_detect:
+  min_batch_size: 50
