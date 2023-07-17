@@ -1,0 +1,17 @@
+psutil
+dvc[s3]
+dvclive
+pandas
+scikit-learn==1.2.2
+eli5
+xgboost
+fastapi
+uvicorn
+jsonschema
+python-box==6.0.1
+matplotlib
+ipykernel
+notebook
+seaborn
+mangum
+csv2md
