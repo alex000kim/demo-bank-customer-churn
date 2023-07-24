@@ -1,9 +1,9 @@
 feature,importance
-num__Age,0.38
-num__NumOfProducts,0.21
+num__Age,0.39
+num__NumOfProducts,0.22
 num__IsActiveMember,0.17
-num__Balance,0.14
+num__Balance,0.15
+num__CreditScore,0.12
 num__Tenure,0.11
-num__CreditScore,0.10
-num__EstimatedSalary,0.09
+num__EstimatedSalary,0.10
 num__HasCrCard,0.05
